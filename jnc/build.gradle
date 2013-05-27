@@ -1,6 +1,10 @@
 apply plugin: 'base'
 apply plugin: 'eclipse'
 apply plugin: 'java'
+apply plugin: 'findbugs'
+
+// Allow the build to continue if there are findbug warnings.
+tasks.withType(FindBugs){ ignoreFailures = true }
 
 repositories { mavenCentral() }
 
