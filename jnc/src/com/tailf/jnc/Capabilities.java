@@ -7,41 +7,41 @@ public class Capabilities {
     /**
      * The NETCONF namespace "urn:ietf:params:xml:ns:netconf:base:1.0"
      */
-    public static String NS_NETCONF = "urn:ietf:params:xml:ns:netconf:base:1.0";
+    public static final String NS_NETCONF = "urn:ietf:params:xml:ns:netconf:base:1.0";
 
     /**
      * The NETCONF notifications namespace.
      * "urn:ietf:params:xml:ns:netconf:notification:1.0"
      */
-    public static String NS_NOTIFICATION = "urn:ietf:params:xml:ns:netconf:" +
+    public static final String NS_NOTIFICATION = "urn:ietf:params:xml:ns:netconf:" +
     		"notification:1.0";
 
     /**
      * The NETCONF partial lock namespace.
      * "urn:ietf:params:xml:ns:netconf:partial-lock:1.0"
      */
-    public static String NS_PARTIAL_LOCK = "urn:ietf:params:xml:ns:netconf:" +
+    public static final String NS_PARTIAL_LOCK = "urn:ietf:params:xml:ns:netconf:" +
     		"partial-lock:1.0";
 
     /**
      * String constant for the NETCONF base capability.
      * "urn:ietf:params:netconf:base:1.0".
      */
-    public static String NETCONF_BASE_CAPABILITY = "urn:ietf:params:" +
+    public static final String NETCONF_BASE_CAPABILITY = "urn:ietf:params:" +
     		"netconf:base:1.0";
 
     /**
      * String constant for the <code>:writable-running</code> capability.
      * "urn:ietf:params:netconf:capability:writable-running:1.0".
      */
-    public static String WRITABLE_RUNNING_CAPABILITY = "urn:ietf:params:" +
+    public static final String WRITABLE_RUNNING_CAPABILITY = "urn:ietf:params:" +
     		"netconf:capability:writable-running:1.0";
 
     /**
      * String constant for the <code>:candidate</code> capability.
      * "urn:ietf:params:netconf:capability:candidate:1.0".
      */
-    public static String CANDIDATE_CAPABILITY = "urn:ietf:params:netconf:" +
+    public static final String CANDIDATE_CAPABILITY = "urn:ietf:params:netconf:" +
     		"capability:candidate:1.0";
 
     /**
@@ -55,28 +55,28 @@ public class Capabilities {
      * String constant for the <code>:rollback-on-error</code> capability.
      * "urn:ietf:params:netconf:capability:rollback-on-error:1.0".
      */
-    public static String ROLLBACK_ON_ERROR_CAPABILITY = "urn:ietf:params:" +
+    public static final String ROLLBACK_ON_ERROR_CAPABILITY = "urn:ietf:params:" +
     		"netconf:capability:rollback-on-error:1.0";
 
     /**
      * String constant for the <code>:validate</code> capability.
      * "urn:ietf:params:netconf:capability:validate:1.0".
      */
-    public static String VALIDATE_CAPABILITY = "urn:ietf:params:netconf:" +
+    public static final String VALIDATE_CAPABILITY = "urn:ietf:params:netconf:" +
     		"capability:validate:1.0";
 
     /**
      * String constant for the <code>:startup</code> capability.
      * "urn:ietf:params:netconf:capability:startup:1.0".
      */
-    public static String STARTUP_CAPABILITY = "urn:ietf:params:netconf:" +
+    public static final String STARTUP_CAPABILITY = "urn:ietf:params:netconf:" +
     		"capability:startup:1.0";
 
     /**
      * String constant for the <code>:url</code> capability.
      * "urn:ietf:params:netconf:capability:url:1.0".
      */
-    public static String URL_CAPABILITY = "urn:ietf:params:netconf:" +
+    public static final String URL_CAPABILITY = "urn:ietf:params:netconf:" +
     		"capability:url:1.0";
 
     public static String URL_CAPABILITY_SCHEME = "urn:ietf:params:netconf:" +
@@ -86,28 +86,28 @@ public class Capabilities {
      * String constant for the <code>:xpath</code> capability.
      * "urn:ietf:params:netconf:capability:xpath:1.0".
      */
-    public static String XPATH_CAPABILITY = "urn:ietf:params:netconf:" +
+    public static final String XPATH_CAPABILITY = "urn:ietf:params:netconf:" +
     		"capability:xpath:1.0";
 
     /**
      * String constant for the <code>:notification</code> capability.
      * "urn:ietf:params:netconf:capability:notification:1.0".
      */
-    public static String NOTIFICATION_CAPABILITY = "urn:ietf:params:netconf:" +
+    public static final String NOTIFICATION_CAPABILITY = "urn:ietf:params:netconf:" +
     		"capability:notification:1.0";
 
     /**
      * String constant for the <code>:interleave</code> capability.
      * "urn:ietf:params:netconf:capability:interleave:1.0".
      */
-    public static String INTERLEAVE_CAPABILITY = "urn:ietf:params:netconf:" +
+    public static final String INTERLEAVE_CAPABILITY = "urn:ietf:params:netconf:" +
     		"capability:interleave:1.0";
 
     /**
      * String constant for the <code>:partial-lock</code> capability.
      * "urn:ietf:params:netconf:capability:partial-lock:1.0"
      */
-    public static String PARTIAL_LOCK_CAPABILITY = "urn:ietf:params:netconf:" +
+    public static final String PARTIAL_LOCK_CAPABILITY = "urn:ietf:params:netconf:" +
     		"capability:partial-lock:1.0";
 
     /**
