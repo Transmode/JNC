@@ -211,7 +211,9 @@ public class SchemaParser {
      */
     public void findAndReadFile(final String filename, final HashMap<Tagpath, SchemaNode> h, final Class clazz)
             throws JNCException {
-        final URL url = clazz.getResource(filename);
+    	// TODO Work-around to make tests run under gradle
+        // final URL url = clazz.getResource(filename);
+        final URL url = Thread.currentThread().getContextClassLoader().getResource(filename);
         if (url == null){
             throw new JNCException(JNCException.PARSER_ERROR, "Cannot find file: " + filename + " on the classpath.");
         }
