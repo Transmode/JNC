@@ -5,7 +5,7 @@ apply plugin: 'findbugs'
 apply plugin: 'maven'
 
 project.group = "com.tailf.jnc"
-project.version = "1.0.3"
+project.version = "1.0-build" + System.getenv()['BUILD_NUMBER'] // BUILD_NUMBER
 
 // Allow the build to continue if there are findbug warnings.
 tasks.withType(FindBugs){ ignoreFailures = true }
