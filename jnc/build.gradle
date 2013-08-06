@@ -2,6 +2,10 @@ apply plugin: 'base'
 apply plugin: 'eclipse'
 apply plugin: 'java'
 apply plugin: 'findbugs'
+apply plugin: 'maven'
+
+project.group = "com.tailf.jnc"
+project.version = "1.0.3"
 
 // Allow the build to continue if there are findbug warnings.
 tasks.withType(FindBugs){ ignoreFailures = true }
@@ -20,3 +24,34 @@ dependencies {
 	compile 'org.jvnet.hudson:ganymed-ssh-2:build260'
 	testCompile 'junit:junit:4.8.2'
 }
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+	classifier = 'sources'
+	from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+	classifier = 'javadoc'
+	from javadoc.destinationDir
+}
+
+artifacts {
+	archives sourcesJar
+	archives javadocJar
+}
+
+uploadArchives {
+	repositories {
+			mavenDeployer {
+					configuration = configurations.runtime
+					
+					repository ( url: "http://eagle-jenkins:8081/artifactory/libs-release-local" ) {
+							authentication(userName: "admin", password: "password")
+					}
+			}
+	}
+}
+
+
+
+
