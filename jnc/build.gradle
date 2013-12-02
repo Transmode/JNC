@@ -5,7 +5,10 @@ apply plugin: 'findbugs'
 apply plugin: 'maven'
 
 project.group = "com.tailf.jnc"
-project.version = "1.0.0-SNAPSHOT" // BUILD_NUMBER
+def versionSuffix = hasProperty('release') ? "" : "-SNAPSHOT"
+project.version = "1.0.0" + versionSuffix // BUILD_NUMBER
+def repoPath = hasProperty('release') ? "libs-release-local" : "libs-snapshot-local"
+
 
 // Allow the build to continue if there are findbug warnings.
 tasks.withType(FindBugs){ ignoreFailures = true }
@@ -44,7 +47,7 @@ uploadArchives {
 	repositories {
 		mavenDeployer {
 			configuration = configurations.runtime
-			repository ( url: "http://eagle-jenkins:8081/artifactory/libs-snapshot-local" ) {
+			repository ( url: "http://eagle-jenkins:8081/artifactory/" + repoPath ) {
 				authentication(userName: "admin", password: "password")
 			}
 		}
