@@ -47,7 +47,7 @@ uploadArchives {
 	repositories {
 		mavenDeployer {
 			configuration = configurations.runtime
-			repository ( url: "http://eagle-jenkins:8081/artifactory/" + repoPath ) {
+			repository ( url: "http://artifactory.transmode.se/artifactory/" + repoPath ) {
 				authentication(userName: "admin", password: "password")
 			}
 		}
